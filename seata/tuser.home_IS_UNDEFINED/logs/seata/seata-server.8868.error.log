@@ -1,0 +1,96 @@
+2023-06-03 08:00:04.591 ERROR --- [                          main] io.seata.server.Server                   : nettyServer init error:ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+==>
+java.lang.RuntimeException: ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:157) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.AbstractNettyRemotingServer.init(AbstractNettyRemotingServer.java:55) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyRemotingServer.init(NettyRemotingServer.java:52) ~[seata-core-1.4.2.jar:na]
+	at io.seata.server.Server.main(Server.java:98) ~[seata-server-1.4.2.jar:na]
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:552) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:491) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:486) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:239) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:200) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:185) ~[nacos-client-1.3.3.jar:na]
+	at io.seata.discovery.registry.nacos.NacosRegistryServiceImpl.register(NacosRegistryServiceImpl.java:86) ~[seata-discovery-nacos-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:153) ~[seata-core-1.4.2.jar:na]
+	... 3 common frames omitted
+<==
+
+2023-06-03 08:01:00.691 ERROR --- [                          main] io.seata.server.Server                   : nettyServer init error:ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+==>
+java.lang.RuntimeException: ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:157) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.AbstractNettyRemotingServer.init(AbstractNettyRemotingServer.java:55) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyRemotingServer.init(NettyRemotingServer.java:52) ~[seata-core-1.4.2.jar:na]
+	at io.seata.server.Server.main(Server.java:98) ~[seata-server-1.4.2.jar:na]
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:552) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:491) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:486) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:239) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:200) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:185) ~[nacos-client-1.3.3.jar:na]
+	at io.seata.discovery.registry.nacos.NacosRegistryServiceImpl.register(NacosRegistryServiceImpl.java:86) ~[seata-discovery-nacos-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:153) ~[seata-core-1.4.2.jar:na]
+	... 3 common frames omitted
+<==
+
+2023-06-03 22:15:08.105 ERROR --- [                  ShutdownHook] i.s.core.rpc.netty.NettyServerBootstrap  : failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+2023-06-03 22:15:21.237 ERROR --- [                  ShutdownHook] i.s.core.rpc.netty.NettyServerBootstrap  : failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+

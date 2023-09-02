@@ -1,0 +1,64 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedHeaders: "token"
+            allowedOrigins: "*"
+#            allowCredentials: true
+            allowedMethods: "*"
+      # http://localhost:8500/borrow/1
+#      配置路由，注意这里是个列表，每一项包含了很多信息
+      routes:
+        - id: borrow-service     # 路由名
+          uri: http://localhost:8280    #  路由地址   lb表示使用负载均衡到微服务，也可以使用http正常转发
+          predicates:      # 路由规则
+            - Path=/borrow/**   # 只要是访问这个路径，一律都被路由到上面的指定服务
+
+        - id: book-service
+          uri: http://localhost:8181
+          predicates:
+            - Path=/book/**
+
+        - id: user-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/user/**
+
+        - id: auth-service
+          uri: http://localhost:8501
+          predicates:
+            - Path=/auth/**
+
+        - id: torder-service
+          uri: http://localhost:8280
+          predicates:
+            - Path=/torder/**
+#  redis:
+#    host: 127.0.0.1
+#    port: 6001
+
+
+# 拦截器路径拦截或者不拦截配置
+interceptorconfig:
+  path:
+    #公共资源
+    openPaths:
+      - book
+      - static
+      - /auth/login
+    # 普通用户权限
+    userPaths:
+      - user
+      - torder
+      - my
+    # 管理权限
+    adminPaths:
+      - admin
+      - auth

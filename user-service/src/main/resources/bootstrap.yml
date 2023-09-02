@@ -1,0 +1,10 @@
+#spring:
+#  application:
+#    name: userservice
+#  profiles:
+#    active: dev
+#  cloud:
+#    nacos:
+#      config:
+#        file-extension: yml
+#        server-addr: localhost:80

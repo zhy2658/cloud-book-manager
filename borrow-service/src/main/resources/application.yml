@@ -1,0 +1,56 @@
+server:
+  port: 8280
+
+spring:
+  application:
+    name: borrowservice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudstudy
+    username: root
+    password: 1234
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:80
+#        false为非临时实例
+        ephemeral: false
+        cluster-name: Chengdu
+#        namespace: 79662361-aad6-4a48-84c5-458d75d5d9a8
+#    将loadbalancer的nacos支持开启 集成nacos负载均衡
+    loadbalancer:
+      nacos:
+        enabled: true
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+      web-context-unify: false
+      block-page: /blocked
+
+feign:
+  sentinel:
+    enabled: true
+
+seata:
+  tx-service-group: borrowservice-seata-service-group
+  enabled: true
+#  注册
+  registry:
+    type: nacos
+    nacos:
+      server-addr: localhost:80
+      group: SEATA_GROUP
+      namespace: 9da7dbcd-669a-4cb5-ade5-e05478a56c07
+      username: nacos
+      password: nacos
+#      配置
+  config:
+    type: nacos
+    nacos:
+      server-addr: localhost:80
+      group: SEATA_GROUP
+      namespace: 9da7dbcd-669a-4cb5-ade5-e05478a56c07
+      username: nacos
+      password: nacos
+
+

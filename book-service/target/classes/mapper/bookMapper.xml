@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.BookMapper">
+
+  <update id="update" parameterType="book">
+  update book
+  <set>
+    <if test="name != null and name != ''">
+      name = #{name},
+    </if>
+    <if test="description != null and description != ''">
+      description = #{description},
+    </if>
+    <if test="price != null and price != ''">
+      price = #{price},
+    </if>
+    <if test="author != null and author != ''">
+      author = #{author},
+    </if>
+    <if test="img != null and img != ''">
+      img = #{img},
+    </if>
+    <if test="wordCount != null and wordCount != ''">
+      wordCount = #{wordCount},
+    </if>
+    <if test="hot != null ">
+      hot = #{hot},
+    </if>
+    <if test="releaseTime != null ">
+      releaseTime = #{releaseTime},
+    </if>
+    <if test="sortId != null ">
+      sortId = #{sortId},
+    </if>
+    <if test="tags != null and tags != ''">
+      tags = #{tags},
+    </if>
+
+  </set>
+  where id = #{id}
+</update>
+
+</mapper>

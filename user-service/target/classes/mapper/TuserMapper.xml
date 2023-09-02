@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.UserMapper">
+
+  <update id="update" parameterType="tuser">
+  update tuser
+  <set>
+    <if test="uname != null and uname != ''">
+      uname = #{uname},
+    </if>
+    <if test="password != null and password != ''">
+      password = #{password},
+    </if>
+    <if test="nickname != null and nickname != ''">
+      nickname = #{nickname},
+    </if>
+    <if test="userphoto != null and userphoto != ''">
+      userphoto = #{userphoto},
+    </if>
+    <if test="role != null and role != ''">
+      role = #{role},
+    </if>
+    <if test="coin != null">
+      coin = #{coin},
+    </if>
+
+  </set>
+  where id = #{id}
+</update>
+
+</mapper>

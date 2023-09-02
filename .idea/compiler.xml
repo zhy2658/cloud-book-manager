@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="auth-service" />
+        <module name="common" />
+        <module name="book-service" />
+        <module name="borrow-service" />
+        <module name="gateway-server" />
+        <module name="common-web" />
+        <module name="user-service" />
+        <module name="torder-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-service" options="-parameters" />
+      <module name="book-service" options="-parameters" />
+      <module name="borrow-service" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="common-web" options="-parameters" />
+      <module name="gateway-server" options="-parameters" />
+      <module name="torder-service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+    </option>
+  </component>
+</project>

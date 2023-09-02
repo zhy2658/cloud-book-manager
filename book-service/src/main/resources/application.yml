@@ -1,0 +1,94 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: bookservice
+  shardingsphere:
+    datasource:
+      names: db0,db1
+      db0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/db_bookshop_book
+        username: root
+        password: 1234
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3307/db_bookshop_book
+        username: root
+        password: 1234
+    rules:
+      readwrite-splitting:
+        data-sources:
+          user-db:
+            type: Static
+            props:
+              write-data-source-name: db0
+              read-data-source-names: db1
+              load-balancer-name: my-load
+        load-balancers:
+          my-load:
+            type: ROUND_ROBIN
+    props:
+      sql-show: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:80
+        cluster-name: Chongqing
+    #        namespace: 79662361-aad6-4a48-84c5-458d75d5d9a8
+    sentinel:
+      transport:
+        dashboard: localhost:8858
+  rabbitmq:
+    addresses: 127.0.0.1
+    username: admin
+    password: 1234
+    virtual-host: /test
+
+  session:
+    store-type: redis
+  redis:
+    cluster:
+      nodes:
+        - 127.0.0.1:6001
+        - 127.0.0.1:6002
+        - 127.0.0.1:6003
+        - 127.0.0.1:7001
+        - 127.0.0.1:7002
+        - 127.0.0.1:7003
+
+feign:
+  sentinel:
+    enabled: true
+
+seata:
+  tx-service-group: bookservice-seata-service-group
+  enabled: true
+  #  注册
+  registry:
+    type: nacos
+    nacos:
+      server-addr: localhost:80
+      group: SEATA_GROUP
+      namespace: 9da7dbcd-669a-4cb5-ade5-e05478a56c07
+      username: nacos
+      password: nacos
+  #  配置
+  config:
+    type: nacos
+    nacos:
+      server-addr: localhost:80
+      group: SEATA_GROUP
+      namespace: 9da7dbcd-669a-4cb5-ade5-e05478a56c07
+      username: nacos
+      password: nacos
+
+bookImgPath: D:\www\server\nginx-1.19.0\html\static\uploadImg
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.entity

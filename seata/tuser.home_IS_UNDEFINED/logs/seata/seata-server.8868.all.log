@@ -1,0 +1,432 @@
+2023-06-03 07:59:18.683  INFO --- [                          main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2023-06-03 07:59:18.688  INFO --- [                          main] io.seata.config.FileConfiguration        : The configuration file used is E:\User\Desktop\gitclone\Jedis\mycloud_ali\seata\seata-server-1.4.2\conf\registry.conf
+2023-06-03 07:59:45.918  INFO --- [                          main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-03 07:59:55.406  INFO --- [                          main] i.s.core.rpc.netty.NettyServerBootstrap  : Server started, listen port: 8868
+2023-06-03 08:00:04.591 ERROR --- [                          main] io.seata.server.Server                   : nettyServer init error:ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+==>
+java.lang.RuntimeException: ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:157) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.AbstractNettyRemotingServer.init(AbstractNettyRemotingServer.java:55) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyRemotingServer.init(NettyRemotingServer.java:52) ~[seata-core-1.4.2.jar:na]
+	at io.seata.server.Server.main(Server.java:98) ~[seata-server-1.4.2.jar:na]
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:552) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:491) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:486) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:239) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:200) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:185) ~[nacos-client-1.3.3.jar:na]
+	at io.seata.discovery.registry.nacos.NacosRegistryServiceImpl.register(NacosRegistryServiceImpl.java:86) ~[seata-discovery-nacos-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:153) ~[seata-core-1.4.2.jar:na]
+	... 3 common frames omitted
+<==
+
+2023-06-03 08:00:16.776  INFO --- [                          main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2023-06-03 08:00:16.782  INFO --- [                          main] io.seata.config.FileConfiguration        : The configuration file used is E:\User\Desktop\gitclone\Jedis\mycloud_ali\seata\seata-server-1.4.2\conf\registry.conf
+2023-06-03 08:00:41.936  INFO --- [                          main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-03 08:00:51.599  INFO --- [                          main] i.s.core.rpc.netty.NettyServerBootstrap  : Server started, listen port: 8868
+2023-06-03 08:01:00.691 ERROR --- [                          main] io.seata.server.Server                   : nettyServer init error:ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+==>
+java.lang.RuntimeException: ErrCode:500, ErrMsg:failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:157) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.AbstractNettyRemotingServer.init(AbstractNettyRemotingServer.java:55) ~[seata-core-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyRemotingServer.init(NettyRemotingServer.java:52) ~[seata-core-1.4.2.jar:na]
+	at io.seata.server.Server.main(Server.java:98) ~[seata-server-1.4.2.jar:na]
+Caused by: com.alibaba.nacos.api.exception.NacosException: failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:552) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:491) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqApi(NamingProxy.java:486) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:239) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:200) ~[nacos-client-1.3.3.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:185) ~[nacos-client-1.3.3.jar:na]
+	at io.seata.discovery.registry.nacos.NacosRegistryServiceImpl.register(NacosRegistryServiceImpl.java:86) ~[seata-discovery-nacos-1.4.2.jar:na]
+	at io.seata.core.rpc.netty.NettyServerBootstrap.start(NettyServerBootstrap.java:153) ~[seata-core-1.4.2.jar:na]
+	... 3 common frames omitted
+<==
+
+2023-06-03 08:01:10.097  INFO --- [                          main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2023-06-03 08:01:10.100  INFO --- [                          main] io.seata.config.FileConfiguration        : The configuration file used is E:\User\Desktop\gitclone\Jedis\mycloud_ali\seata\seata-server-1.4.2\conf\registry.conf
+2023-06-03 08:01:14.333  INFO --- [                          main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-03 08:01:15.340  INFO --- [                          main] i.s.core.rpc.netty.NettyServerBootstrap  : Server started, listen port: 8868
+2023-06-03 08:02:28.515  INFO --- [   ServerHandlerThread_1_1_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0xdb19974f, L:/192.168.59.1:8868 - R:/192.168.59.1:12290],client version:1.4.2
+2023-06-03 08:02:28.535  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0xc6af8e51, L:/192.168.59.1:8868 - R:/192.168.59.1:12284],client version:1.4.2
+2023-06-03 08:02:34.749  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0xb934cccd, L:/192.168.59.1:8868 - R:/192.168.59.1:12335],client version:1.4.2
+2023-06-03 08:02:34.749  INFO --- [   ServerHandlerThread_1_2_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0xa2a02a1b, L:/192.168.59.1:8868 - R:/192.168.59.1:12336],client version:1.4.2
+2023-06-03 08:02:37.853  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0x89bb30ca, L:/192.168.59.1:8868 - R:/192.168.59.1:12359],client version:1.4.2
+2023-06-03 08:02:37.854  INFO --- [   ServerHandlerThread_1_3_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0x64b3100a, L:/192.168.59.1:8868 - R:/192.168.59.1:12360],client version:1.4.2
+2023-06-03 08:02:40.501  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0x2302efc4, L:/192.168.59.1:8868 - R:/192.168.59.1:12382],client version:1.4.2
+2023-06-03 08:02:40.501  INFO --- [   ServerHandlerThread_1_4_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0xcf6a6fd9, L:/192.168.59.1:8868 - R:/192.168.59.1:12383],client version:1.4.2
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12284 to server channel inactive.
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12382 to server channel inactive.
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_8_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12383 to server channel inactive.
+2023-06-03 08:03:54.562  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc6af8e51, L:/192.168.59.1:8868 ! R:/192.168.59.1:12284]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:12284', channel=[id: 0xc6af8e51, L:/192.168.59.1:8868 ! R:/192.168.59.1:12284], resourceSets=null}
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_4_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12336 to server channel inactive.
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_2_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12290 to server channel inactive.
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12359 to server channel inactive.
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_6_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12360 to server channel inactive.
+2023-06-03 08:03:54.562  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x2302efc4, L:/192.168.59.1:8868 ! R:/192.168.59.1:12382]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:12382', channel=[id: 0x2302efc4, L:/192.168.59.1:8868 ! R:/192.168.59.1:12382], resourceSets=null}
+2023-06-03 08:03:54.561  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:12335 to server channel inactive.
+2023-06-03 08:03:54.562  INFO --- [   NettyServerNIOWorker_1_8_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xcf6a6fd9, L:/192.168.59.1:8868 ! R:/192.168.59.1:12383]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:12383', channel=[id: 0xcf6a6fd9, L:/192.168.59.1:8868 ! R:/192.168.59.1:12383], resourceSets=null}
+2023-06-03 08:03:54.562  INFO --- [   NettyServerNIOWorker_1_4_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xa2a02a1b, L:/192.168.59.1:8868 ! R:/192.168.59.1:12336]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:12336', channel=[id: 0xa2a02a1b, L:/192.168.59.1:8868 ! R:/192.168.59.1:12336], resourceSets=null}
+2023-06-03 08:03:54.562  INFO --- [   NettyServerNIOWorker_1_2_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xdb19974f, L:/192.168.59.1:8868 ! R:/192.168.59.1:12290]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:12290', channel=[id: 0xdb19974f, L:/192.168.59.1:8868 ! R:/192.168.59.1:12290], resourceSets=null}
+2023-06-03 08:03:54.564  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x89bb30ca, L:/192.168.59.1:8868 ! R:/192.168.59.1:12359]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:12359', channel=[id: 0x89bb30ca, L:/192.168.59.1:8868 ! R:/192.168.59.1:12359], resourceSets=null}
+2023-06-03 08:03:54.564  INFO --- [   NettyServerNIOWorker_1_6_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x64b3100a, L:/192.168.59.1:8868 ! R:/192.168.59.1:12360]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:12360', channel=[id: 0x64b3100a, L:/192.168.59.1:8868 ! R:/192.168.59.1:12360], resourceSets=null}
+2023-06-03 08:03:54.564  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xb934cccd, L:/192.168.59.1:8868 ! R:/192.168.59.1:12335]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:12335', channel=[id: 0xb934cccd, L:/192.168.59.1:8868 ! R:/192.168.59.1:12335], resourceSets=null}
+2023-06-03 08:06:25.979  INFO --- [                          main] io.seata.config.FileConfiguration        : The file name of the operation is registry
+2023-06-03 08:06:25.983  INFO --- [                          main] io.seata.config.FileConfiguration        : The configuration file used is E:\User\Desktop\gitclone\Jedis\mycloud_ali\seata\seata-server-1.4.2\conf\registry.conf
+2023-06-03 08:06:28.213  INFO --- [                          main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-03 08:06:29.092  INFO --- [                          main] i.s.core.rpc.netty.NettyServerBootstrap  : Server started, listen port: 8868
+2023-06-03 08:07:46.515  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0x1ee3857b, L:/192.168.59.1:8868 - R:/192.168.59.1:13892],client version:1.4.2
+2023-06-03 08:07:46.617  INFO --- [   ServerHandlerThread_1_1_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0xe57fd1b1, L:/192.168.59.1:8868 - R:/192.168.59.1:13901],client version:1.4.2
+2023-06-03 08:07:51.398  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x23a5d24e, L:/192.168.59.1:8868 - R:/192.168.59.1:13932],client version:1.4.2
+2023-06-03 08:07:51.398  INFO --- [   ServerHandlerThread_1_2_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0xa5f4d2a1, L:/192.168.59.1:8868 - R:/192.168.59.1:13933],client version:1.4.2
+2023-06-03 08:07:55.389  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0x709c3667, L:/192.168.59.1:8868 - R:/192.168.59.1:13969],client version:1.4.2
+2023-06-03 08:07:55.389  INFO --- [   ServerHandlerThread_1_3_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0xd57e5535, L:/192.168.59.1:8868 - R:/192.168.59.1:13970],client version:1.4.2
+2023-06-03 08:07:57.311  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0x97fd1d18, L:/192.168.59.1:8868 - R:/192.168.59.1:13991],client version:1.4.2
+2023-06-03 08:07:57.311  INFO --- [   ServerHandlerThread_1_4_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0x8bdc3890, L:/192.168.59.1:8868 - R:/192.168.59.1:13992],client version:1.4.2
+2023-06-03 08:25:15.978  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13932 to server channel inactive.
+2023-06-03 08:25:15.978  INFO --- [   NettyServerNIOWorker_1_4_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13933 to server channel inactive.
+2023-06-03 08:25:15.979  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x23a5d24e, L:/192.168.59.1:8868 ! R:/192.168.59.1:13932]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:13932', channel=[id: 0x23a5d24e, L:/192.168.59.1:8868 ! R:/192.168.59.1:13932], resourceSets=null}
+2023-06-03 08:25:15.979  INFO --- [   NettyServerNIOWorker_1_4_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xa5f4d2a1, L:/192.168.59.1:8868 ! R:/192.168.59.1:13933]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:13933', channel=[id: 0xa5f4d2a1, L:/192.168.59.1:8868 ! R:/192.168.59.1:13933], resourceSets=null}
+2023-06-03 08:26:30.946  INFO --- [  NettyServerNIOWorker_1_10_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x6c2a73f2, L:/192.168.59.1:8868 - R:/192.168.59.1:8774],client version:1.4.2
+2023-06-03 08:26:30.946  INFO --- [   ServerHandlerThread_1_5_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x06a52fbb, L:/192.168.59.1:8868 - R:/192.168.59.1:8775],client version:1.4.2
+2023-06-03 08:50:04.382  INFO --- [  NettyServerNIOWorker_1_10_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:8774 to server channel inactive.
+2023-06-03 08:50:04.383  INFO --- [  NettyServerNIOWorker_1_10_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x6c2a73f2, L:/192.168.59.1:8868 ! R:/192.168.59.1:8774]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:8774', channel=[id: 0x6c2a73f2, L:/192.168.59.1:8868 ! R:/192.168.59.1:8774], resourceSets=null}
+2023-06-03 08:50:04.385  INFO --- [   NettyServerNIOWorker_1_9_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:8775 to server channel inactive.
+2023-06-03 08:50:04.385  INFO --- [   NettyServerNIOWorker_1_9_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x06a52fbb, L:/192.168.59.1:8868 ! R:/192.168.59.1:8775]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:8775', channel=[id: 0x06a52fbb, L:/192.168.59.1:8868 ! R:/192.168.59.1:8775], resourceSets=null}
+2023-06-03 08:51:18.313  INFO --- [  NettyServerNIOWorker_1_11_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x38ef22fe, L:/192.168.59.1:8868 - R:/192.168.59.1:5719],client version:1.4.2
+2023-06-03 08:51:18.315  INFO --- [   ServerHandlerThread_1_6_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x215fb19b, L:/192.168.59.1:8868 - R:/192.168.59.1:5720],client version:1.4.2
+2023-06-03 08:58:48.213  INFO --- [  NettyServerNIOWorker_1_11_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:5719 to server channel inactive.
+2023-06-03 08:58:48.214  INFO --- [  NettyServerNIOWorker_1_11_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x38ef22fe, L:/192.168.59.1:8868 ! R:/192.168.59.1:5719]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:5719', channel=[id: 0x38ef22fe, L:/192.168.59.1:8868 ! R:/192.168.59.1:5719], resourceSets=null}
+2023-06-03 08:58:48.216  INFO --- [  NettyServerNIOWorker_1_12_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:5720 to server channel inactive.
+2023-06-03 08:58:48.217  INFO --- [  NettyServerNIOWorker_1_12_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x215fb19b, L:/192.168.59.1:8868 ! R:/192.168.59.1:5720]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:5720', channel=[id: 0x215fb19b, L:/192.168.59.1:8868 ! R:/192.168.59.1:5720], resourceSets=null}
+2023-06-03 08:59:58.949  INFO --- [  NettyServerNIOWorker_1_13_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x2e997fae, L:/192.168.59.1:8868 - R:/192.168.59.1:9401],client version:1.4.2
+2023-06-03 08:59:58.949  INFO --- [   ServerHandlerThread_1_7_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x08b957e7, L:/192.168.59.1:8868 - R:/192.168.59.1:9402],client version:1.4.2
+2023-06-03 09:02:48.023  INFO --- [  NettyServerNIOWorker_1_13_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:9401 to server channel inactive.
+2023-06-03 09:02:48.024  INFO --- [  NettyServerNIOWorker_1_13_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x2e997fae, L:/192.168.59.1:8868 ! R:/192.168.59.1:9401]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:9401', channel=[id: 0x2e997fae, L:/192.168.59.1:8868 ! R:/192.168.59.1:9401], resourceSets=null}
+2023-06-03 09:02:48.026  INFO --- [  NettyServerNIOWorker_1_14_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:9402 to server channel inactive.
+2023-06-03 09:02:48.026  INFO --- [  NettyServerNIOWorker_1_14_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x08b957e7, L:/192.168.59.1:8868 ! R:/192.168.59.1:9402]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:9402', channel=[id: 0x08b957e7, L:/192.168.59.1:8868 ! R:/192.168.59.1:9402], resourceSets=null}
+2023-06-03 09:02:49.502  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13991 to server channel inactive.
+2023-06-03 09:02:49.502  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x97fd1d18, L:/192.168.59.1:8868 ! R:/192.168.59.1:13991]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:13991', channel=[id: 0x97fd1d18, L:/192.168.59.1:8868 ! R:/192.168.59.1:13991], resourceSets=null}
+2023-06-03 09:02:49.505  INFO --- [   NettyServerNIOWorker_1_8_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13992 to server channel inactive.
+2023-06-03 09:02:49.506  INFO --- [   NettyServerNIOWorker_1_8_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x8bdc3890, L:/192.168.59.1:8868 ! R:/192.168.59.1:13992]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:13992', channel=[id: 0x8bdc3890, L:/192.168.59.1:8868 ! R:/192.168.59.1:13992], resourceSets=null}
+2023-06-03 09:02:50.946  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13969 to server channel inactive.
+2023-06-03 09:02:50.947  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x709c3667, L:/192.168.59.1:8868 ! R:/192.168.59.1:13969]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:13969', channel=[id: 0x709c3667, L:/192.168.59.1:8868 ! R:/192.168.59.1:13969], resourceSets=null}
+2023-06-03 09:02:50.949  INFO --- [   NettyServerNIOWorker_1_6_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13970 to server channel inactive.
+2023-06-03 09:02:50.949  INFO --- [   NettyServerNIOWorker_1_6_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xd57e5535, L:/192.168.59.1:8868 ! R:/192.168.59.1:13970]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:13970', channel=[id: 0xd57e5535, L:/192.168.59.1:8868 ! R:/192.168.59.1:13970], resourceSets=null}
+2023-06-03 09:02:51.126  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13892 to server channel inactive.
+2023-06-03 09:02:51.126  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x1ee3857b, L:/192.168.59.1:8868 ! R:/192.168.59.1:13892]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:13892', channel=[id: 0x1ee3857b, L:/192.168.59.1:8868 ! R:/192.168.59.1:13892], resourceSets=null}
+2023-06-03 09:02:51.128  INFO --- [   NettyServerNIOWorker_1_2_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:13901 to server channel inactive.
+2023-06-03 09:02:51.128  INFO --- [   NettyServerNIOWorker_1_2_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xe57fd1b1, L:/192.168.59.1:8868 ! R:/192.168.59.1:13901]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:13901', channel=[id: 0xe57fd1b1, L:/192.168.59.1:8868 ! R:/192.168.59.1:13901], resourceSets=null}
+2023-06-03 09:03:58.067  INFO --- [  NettyServerNIOWorker_1_15_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0xf88d6f28, L:/192.168.59.1:8868 - R:/192.168.59.1:11310],client version:1.4.2
+2023-06-03 09:03:58.123  INFO --- [   ServerHandlerThread_1_8_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x47c014ea, L:/192.168.59.1:8868 - R:/192.168.59.1:11317],client version:1.4.2
+2023-06-03 09:04:00.955  INFO --- [  NettyServerNIOWorker_1_17_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0x156cb4eb, L:/192.168.59.1:8868 - R:/192.168.59.1:11475],client version:1.4.2
+2023-06-03 09:04:00.955  INFO --- [   ServerHandlerThread_1_9_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0x528f013f, L:/192.168.59.1:8868 - R:/192.168.59.1:11482],client version:1.4.2
+2023-06-03 09:04:10.271  INFO --- [  NettyServerNIOWorker_1_20_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0x7b47e7d6, L:/192.168.59.1:8868 - R:/192.168.59.1:11656],client version:1.4.2
+2023-06-03 09:04:10.271  INFO --- [  ServerHandlerThread_1_10_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0x7e34f7a1, L:/192.168.59.1:8868 - R:/192.168.59.1:11655],client version:1.4.2
+2023-06-03 09:04:12.641  INFO --- [  NettyServerNIOWorker_1_22_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0xcb62ca04, L:/192.168.59.1:8868 - R:/192.168.59.1:11678],client version:1.4.2
+2023-06-03 09:04:12.642  INFO --- [  ServerHandlerThread_1_11_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0x2178609f, L:/192.168.59.1:8868 - R:/192.168.59.1:11677],client version:1.4.2
+2023-06-03 10:22:03.569  INFO --- [  NettyServerNIOWorker_1_15_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11310 to server channel inactive.
+2023-06-03 10:22:03.570  INFO --- [  NettyServerNIOWorker_1_15_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xf88d6f28, L:/192.168.59.1:8868 ! R:/192.168.59.1:11310]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:11310', channel=[id: 0xf88d6f28, L:/192.168.59.1:8868 ! R:/192.168.59.1:11310], resourceSets=null}
+2023-06-03 10:22:03.572  INFO --- [  NettyServerNIOWorker_1_16_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11317 to server channel inactive.
+2023-06-03 10:22:03.572  INFO --- [  NettyServerNIOWorker_1_16_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x47c014ea, L:/192.168.59.1:8868 ! R:/192.168.59.1:11317]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:11317', channel=[id: 0x47c014ea, L:/192.168.59.1:8868 ! R:/192.168.59.1:11317], resourceSets=null}
+2023-06-03 10:23:14.564  INFO --- [  NettyServerNIOWorker_1_24_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0xe4909b93, L:/192.168.59.1:8868 - R:/192.168.59.1:14168],client version:1.4.2
+2023-06-03 10:23:14.681  INFO --- [  ServerHandlerThread_1_12_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x6fde0aef, L:/192.168.59.1:8868 - R:/192.168.59.1:14167],client version:1.4.2
+2023-06-03 10:28:57.309  INFO --- [  NettyServerNIOWorker_1_22_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11678 to server channel inactive.
+2023-06-03 10:28:57.310  INFO --- [  NettyServerNIOWorker_1_21_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11677 to server channel inactive.
+2023-06-03 10:28:57.329  INFO --- [  NettyServerNIOWorker_1_21_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x2178609f, L:/192.168.59.1:8868 ! R:/192.168.59.1:11677]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:11677', channel=[id: 0x2178609f, L:/192.168.59.1:8868 ! R:/192.168.59.1:11677], resourceSets=null}
+2023-06-03 10:28:57.329  INFO --- [  NettyServerNIOWorker_1_22_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xcb62ca04, L:/192.168.59.1:8868 ! R:/192.168.59.1:11678]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:11678', channel=[id: 0xcb62ca04, L:/192.168.59.1:8868 ! R:/192.168.59.1:11678], resourceSets=null}
+2023-06-03 10:29:01.774  INFO --- [  NettyServerNIOWorker_1_20_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11656 to server channel inactive.
+2023-06-03 10:29:01.774  INFO --- [  NettyServerNIOWorker_1_20_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x7b47e7d6, L:/192.168.59.1:8868 ! R:/192.168.59.1:11656]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:11656', channel=[id: 0x7b47e7d6, L:/192.168.59.1:8868 ! R:/192.168.59.1:11656], resourceSets=null}
+2023-06-03 10:29:01.775  INFO --- [  NettyServerNIOWorker_1_19_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11655 to server channel inactive.
+2023-06-03 10:29:01.776  INFO --- [  NettyServerNIOWorker_1_19_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x7e34f7a1, L:/192.168.59.1:8868 ! R:/192.168.59.1:11655]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:11655', channel=[id: 0x7e34f7a1, L:/192.168.59.1:8868 ! R:/192.168.59.1:11655], resourceSets=null}
+2023-06-03 10:29:02.387  INFO --- [  NettyServerNIOWorker_1_24_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:14168 to server channel inactive.
+2023-06-03 10:29:02.387  INFO --- [  NettyServerNIOWorker_1_24_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xe4909b93, L:/192.168.59.1:8868 ! R:/192.168.59.1:14168]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:14168', channel=[id: 0xe4909b93, L:/192.168.59.1:8868 ! R:/192.168.59.1:14168], resourceSets=null}
+2023-06-03 10:29:02.423  INFO --- [  NettyServerNIOWorker_1_17_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11475 to server channel inactive.
+2023-06-03 10:29:02.424  INFO --- [  NettyServerNIOWorker_1_17_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x156cb4eb, L:/192.168.59.1:8868 ! R:/192.168.59.1:11475]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:11475', channel=[id: 0x156cb4eb, L:/192.168.59.1:8868 ! R:/192.168.59.1:11475], resourceSets=null}
+2023-06-03 10:29:02.425  INFO --- [  NettyServerNIOWorker_1_18_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:11482 to server channel inactive.
+2023-06-03 10:29:02.426  INFO --- [  NettyServerNIOWorker_1_18_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x528f013f, L:/192.168.59.1:8868 ! R:/192.168.59.1:11482]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:11482', channel=[id: 0x528f013f, L:/192.168.59.1:8868 ! R:/192.168.59.1:11482], resourceSets=null}
+2023-06-03 10:29:02.548  INFO --- [  NettyServerNIOWorker_1_23_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:14167 to server channel inactive.
+2023-06-03 10:29:02.549  INFO --- [  NettyServerNIOWorker_1_23_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x6fde0aef, L:/192.168.59.1:8868 ! R:/192.168.59.1:14167]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:14167', channel=[id: 0x6fde0aef, L:/192.168.59.1:8868 ! R:/192.168.59.1:14167], resourceSets=null}
+2023-06-03 10:30:11.566  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x64fa216b, L:/192.168.59.1:8868 - R:/192.168.59.1:3118],client version:1.4.2
+2023-06-03 10:30:11.566  INFO --- [  ServerHandlerThread_1_13_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x1fb106dc, L:/192.168.59.1:8868 - R:/192.168.59.1:3119],client version:1.4.2
+2023-06-03 10:30:13.534  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0x8df00ccb, L:/192.168.59.1:8868 - R:/192.168.59.1:3141],client version:1.4.2
+2023-06-03 10:30:13.608  INFO --- [  ServerHandlerThread_1_14_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0xc15cbc3d, L:/192.168.59.1:8868 - R:/192.168.59.1:3146],client version:1.4.2
+2023-06-03 10:30:15.371  INFO --- [  ServerHandlerThread_1_15_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0xe517727d, L:/192.168.59.1:8868 - R:/192.168.59.1:3167],client version:1.4.2
+2023-06-03 10:30:15.371  INFO --- [   NettyServerNIOWorker_1_6_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0x13aede49, L:/192.168.59.1:8868 - R:/192.168.59.1:3168],client version:1.4.2
+2023-06-03 10:30:22.279  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0x81b5dc5c, L:/192.168.59.1:8868 - R:/192.168.59.1:3217],client version:1.4.2
+2023-06-03 10:30:22.280  INFO --- [  ServerHandlerThread_1_16_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0x906fe492, L:/192.168.59.1:8868 - R:/192.168.59.1:3218],client version:1.4.2
+2023-06-03 11:11:01.757  INFO --- [   NettyServerNIOWorker_1_6_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3168 to server channel inactive.
+2023-06-03 11:11:01.758  INFO --- [   NettyServerNIOWorker_1_6_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x13aede49, L:/192.168.59.1:8868 ! R:/192.168.59.1:3168]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:3168', channel=[id: 0x13aede49, L:/192.168.59.1:8868 ! R:/192.168.59.1:3168], resourceSets=null}
+2023-06-03 11:11:01.760  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3167 to server channel inactive.
+2023-06-03 11:11:01.761  INFO --- [   NettyServerNIOWorker_1_5_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xe517727d, L:/192.168.59.1:8868 ! R:/192.168.59.1:3167]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:3167', channel=[id: 0xe517727d, L:/192.168.59.1:8868 ! R:/192.168.59.1:3167], resourceSets=null}
+2023-06-03 11:11:05.124  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3217 to server channel inactive.
+2023-06-03 11:11:05.125  INFO --- [   NettyServerNIOWorker_1_7_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x81b5dc5c, L:/192.168.59.1:8868 ! R:/192.168.59.1:3217]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:3217', channel=[id: 0x81b5dc5c, L:/192.168.59.1:8868 ! R:/192.168.59.1:3217], resourceSets=null}
+2023-06-03 11:11:05.126  INFO --- [   NettyServerNIOWorker_1_8_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3218 to server channel inactive.
+2023-06-03 11:11:05.126  INFO --- [   NettyServerNIOWorker_1_8_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x906fe492, L:/192.168.59.1:8868 ! R:/192.168.59.1:3218]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:3218', channel=[id: 0x906fe492, L:/192.168.59.1:8868 ! R:/192.168.59.1:3218], resourceSets=null}
+2023-06-03 11:11:07.015  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3118 to server channel inactive.
+2023-06-03 11:11:07.015  INFO --- [   NettyServerNIOWorker_1_1_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x64fa216b, L:/192.168.59.1:8868 ! R:/192.168.59.1:3118]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:3118', channel=[id: 0x64fa216b, L:/192.168.59.1:8868 ! R:/192.168.59.1:3118], resourceSets=null}
+2023-06-03 11:11:07.018  INFO --- [   NettyServerNIOWorker_1_2_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3119 to server channel inactive.
+2023-06-03 11:11:07.018  INFO --- [   NettyServerNIOWorker_1_2_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x1fb106dc, L:/192.168.59.1:8868 ! R:/192.168.59.1:3119]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:3119', channel=[id: 0x1fb106dc, L:/192.168.59.1:8868 ! R:/192.168.59.1:3119], resourceSets=null}
+2023-06-03 11:11:07.043  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3141 to server channel inactive.
+2023-06-03 11:11:07.043  INFO --- [   NettyServerNIOWorker_1_3_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x8df00ccb, L:/192.168.59.1:8868 ! R:/192.168.59.1:3141]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:3141', channel=[id: 0x8df00ccb, L:/192.168.59.1:8868 ! R:/192.168.59.1:3141], resourceSets=null}
+2023-06-03 11:11:07.045  INFO --- [   NettyServerNIOWorker_1_4_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:3146 to server channel inactive.
+2023-06-03 11:11:07.045  INFO --- [   NettyServerNIOWorker_1_4_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc15cbc3d, L:/192.168.59.1:8868 ! R:/192.168.59.1:3146]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:3146', channel=[id: 0xc15cbc3d, L:/192.168.59.1:8868 ! R:/192.168.59.1:3146], resourceSets=null}
+2023-06-03 11:12:21.908  INFO --- [   NettyServerNIOWorker_1_9_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0x6adf780a, L:/192.168.59.1:8868 - R:/192.168.59.1:6451],client version:1.4.2
+2023-06-03 11:12:21.951  INFO --- [  ServerHandlerThread_1_17_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='userservice', transactionServiceGroup='userservice-seata-service-group'},channel:[id: 0xa50c50ff, L:/192.168.59.1:8868 - R:/192.168.59.1:6457],client version:1.4.2
+2023-06-03 11:12:23.702  INFO --- [  NettyServerNIOWorker_1_11_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0xafdcfc50, L:/192.168.59.1:8868 - R:/192.168.59.1:6480],client version:1.4.2
+2023-06-03 11:12:23.728  INFO --- [  ServerHandlerThread_1_18_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='authservice', transactionServiceGroup='authservice-seata-service-group'},channel:[id: 0xe3096770, L:/192.168.59.1:8868 - R:/192.168.59.1:6486],client version:1.4.2
+2023-06-03 11:12:23.764  INFO --- [  NettyServerNIOWorker_1_13_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x03a366fd, L:/192.168.59.1:8868 - R:/192.168.59.1:6487],client version:1.4.2
+2023-06-03 11:12:23.787  INFO --- [  ServerHandlerThread_1_19_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group'},channel:[id: 0x561adb60, L:/192.168.59.1:8868 - R:/192.168.59.1:6491],client version:1.4.2
+2023-06-03 11:12:30.256  INFO --- [  NettyServerNIOWorker_1_15_24] i.s.c.r.processor.server.RegTmProcessor  : TM register success,message:RegisterTMRequest{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0x6f1c9474, L:/192.168.59.1:8868 - R:/192.168.59.1:6557],client version:1.4.2
+2023-06-03 11:12:30.309  INFO --- [  ServerHandlerThread_1_20_500] i.s.c.r.processor.server.RegRmProcessor  : RM register success,message:RegisterRMRequest{resourceIds='null', applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group'},channel:[id: 0xc7efdfda, L:/192.168.59.1:8868 - R:/192.168.59.1:6563],client version:1.4.2
+2023-06-03 22:14:39.758  INFO --- [  NettyServerNIOWorker_1_15_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0x6f1c9474, L:/192.168.59.1:8868 - R:/192.168.59.1:6557]
+2023-06-03 22:14:39.758  INFO --- [  NettyServerNIOWorker_1_11_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0xafdcfc50, L:/192.168.59.1:8868 - R:/192.168.59.1:6480]
+2023-06-03 22:14:39.758  INFO --- [  NettyServerNIOWorker_1_10_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0xa50c50ff, L:/192.168.59.1:8868 - R:/192.168.59.1:6457]
+2023-06-03 22:14:39.758  INFO --- [  NettyServerNIOWorker_1_16_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0xc7efdfda, L:/192.168.59.1:8868 - R:/192.168.59.1:6563]
+2023-06-03 22:14:39.758  INFO --- [  NettyServerNIOWorker_1_13_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0x03a366fd, L:/192.168.59.1:8868 - R:/192.168.59.1:6487]
+2023-06-03 22:14:39.758  INFO --- [  NettyServerNIOWorker_1_14_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0x561adb60, L:/192.168.59.1:8868 - R:/192.168.59.1:6491]
+2023-06-03 22:14:39.758  INFO --- [   NettyServerNIOWorker_1_9_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0x6adf780a, L:/192.168.59.1:8868 - R:/192.168.59.1:6451]
+2023-06-03 22:14:39.758  INFO --- [  NettyServerNIOWorker_1_12_24] i.s.c.r.n.AbstractNettyRemotingServer    : channel exx:远程主机强迫关闭了一个现有的连接。,channel:[id: 0xe3096770, L:/192.168.59.1:8868 - R:/192.168.59.1:6486]
+2023-06-03 22:14:40.073  WARN --- [  NettyServerNIOWorker_1_14_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.073  WARN --- [  NettyServerNIOWorker_1_10_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.069  WARN --- [  NettyServerNIOWorker_1_13_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.073  WARN --- [  NettyServerNIOWorker_1_15_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.073  WARN --- [   NettyServerNIOWorker_1_9_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.073  WARN --- [  NettyServerNIOWorker_1_11_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.073  WARN --- [  NettyServerNIOWorker_1_12_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.073  WARN --- [  NettyServerNIOWorker_1_16_24] io.netty.channel.DefaultChannelPipeline  : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+==>
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.IOUtil.read(Unknown Source) ~[na:1.8.0_192]
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source) ~[na:1.8.0_192]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1128) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:644) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:579) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:496) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:458) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:897) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-all-4.1.30.Final.jar:4.1.30.Final]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_192]
+<==
+
+2023-06-03 22:14:40.299  INFO --- [   NettyServerNIOWorker_1_9_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6451 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_16_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6563 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_11_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6480 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_10_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6457 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_14_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6491 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_13_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6487 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_12_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6486 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_15_24] i.s.c.r.n.AbstractNettyRemotingServer    : 192.168.59.1:6557 to server channel inactive.
+2023-06-03 22:14:40.299  INFO --- [   NettyServerNIOWorker_1_9_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x6adf780a, L:/192.168.59.1:8868 ! R:/192.168.59.1:6451]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:6451', channel=[id: 0x6adf780a, L:/192.168.59.1:8868 ! R:/192.168.59.1:6451], resourceSets=null}
+2023-06-03 22:14:40.299  INFO --- [  NettyServerNIOWorker_1_16_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xc7efdfda, L:/192.168.59.1:8868 ! R:/192.168.59.1:6563]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:6563', channel=[id: 0xc7efdfda, L:/192.168.59.1:8868 ! R:/192.168.59.1:6563], resourceSets=null}
+2023-06-03 22:14:40.300  INFO --- [  NettyServerNIOWorker_1_11_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xafdcfc50, L:/192.168.59.1:8868 ! R:/192.168.59.1:6480]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:6480', channel=[id: 0xafdcfc50, L:/192.168.59.1:8868 ! R:/192.168.59.1:6480], resourceSets=null}
+2023-06-03 22:14:40.300  INFO --- [  NettyServerNIOWorker_1_10_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xa50c50ff, L:/192.168.59.1:8868 ! R:/192.168.59.1:6457]context:RpcContext{applicationId='userservice', transactionServiceGroup='userservice-seata-service-group', clientId='userservice:192.168.59.1:6457', channel=[id: 0xa50c50ff, L:/192.168.59.1:8868 ! R:/192.168.59.1:6457], resourceSets=null}
+2023-06-03 22:14:40.300  INFO --- [  NettyServerNIOWorker_1_14_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x561adb60, L:/192.168.59.1:8868 ! R:/192.168.59.1:6491]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:6491', channel=[id: 0x561adb60, L:/192.168.59.1:8868 ! R:/192.168.59.1:6491], resourceSets=null}
+2023-06-03 22:14:40.300  INFO --- [  NettyServerNIOWorker_1_13_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x03a366fd, L:/192.168.59.1:8868 ! R:/192.168.59.1:6487]context:RpcContext{applicationId='bookservice', transactionServiceGroup='bookservice-seata-service-group', clientId='bookservice:192.168.59.1:6487', channel=[id: 0x03a366fd, L:/192.168.59.1:8868 ! R:/192.168.59.1:6487], resourceSets=null}
+2023-06-03 22:14:40.300  INFO --- [  NettyServerNIOWorker_1_15_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0x6f1c9474, L:/192.168.59.1:8868 ! R:/192.168.59.1:6557]context:RpcContext{applicationId='orderservice', transactionServiceGroup='orderservice-seata-service-group', clientId='orderservice:192.168.59.1:6557', channel=[id: 0x6f1c9474, L:/192.168.59.1:8868 ! R:/192.168.59.1:6557], resourceSets=null}
+2023-06-03 22:14:40.300  INFO --- [  NettyServerNIOWorker_1_12_24] i.s.c.r.n.AbstractNettyRemotingServer    : remove channel:[id: 0xe3096770, L:/192.168.59.1:8868 ! R:/192.168.59.1:6486]context:RpcContext{applicationId='authservice', transactionServiceGroup='authservice-seata-service-group', clientId='authservice:192.168.59.1:6486', channel=[id: 0xe3096770, L:/192.168.59.1:8868 ! R:/192.168.59.1:6486], resourceSets=null}
+2023-06-03 22:15:08.105 ERROR --- [                  ShutdownHook] i.s.core.rpc.netty.NettyServerBootstrap  : failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+
+2023-06-03 22:15:21.237 ERROR --- [                  ShutdownHook] i.s.core.rpc.netty.NettyServerBootstrap  : failed to req API:/nacos/v1/ns/instance after all servers([127.0.0.1:80]) tried: ErrCode:502, ErrMsg:<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx/1.19.0</center>
+</body>
+</html>
+

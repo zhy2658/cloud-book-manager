@@ -1,0 +1,4 @@
+com\example\entity\Borrow.class
+com\example\entity\User.class
+com\example\entity\Book.class
+com\example\config\FeignConfig.class
